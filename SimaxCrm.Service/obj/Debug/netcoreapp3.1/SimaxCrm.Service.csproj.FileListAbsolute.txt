@@ -1,0 +1,15 @@
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Service.deps.json
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Service.dll
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Service.pdb
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Data.dll
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Model.dll
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Data.pdb
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\bin\Debug\netcoreapp3.1\SimaxCrm.Model.pdb
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.csproj.AssemblyReference.cache
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.AssemblyInfoInputs.cache
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.AssemblyInfo.cs
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.csproj.CoreCompileInputs.cache
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.csproj.CopyComplete
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.dll
+C:\Users\NIKHIL DEVAKI\Downloads\codecanyon-31454045-simax-crm-multipurpose-crm-in-dot-net-core (1)\SimaxCrm.Service\obj\Debug\netcoreapp3.1\SimaxCrm.Service.pdb

@@ -1,0 +1,154 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.container-fluid > .animated {
+    margin-top: 24px !important;
+}
+
+
+.form-delete{
+    float:left;
+    margin-right:10px;
+}
+
+.fstElement {
+    font-size: 9px !important;
+    width: 100% !important;
+}
+.fstMultipleMode .fstControls {
+    width: 100% !important;
+}
+
+.tags {
+    background-color: #43a2f3;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+}
+.clickable{
+    cursor:pointer;
+}
+
+.validation-summary-errors{
+    display:block;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.alert ul {
+    list-style: none;
+    margin-bottom: 0 !important;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.tab-content .tab-pane {
+}
+
+.tab-content{
+    border:none;
+}
+
+.tabs-head {
+    background-color: #f0f3f5;
+}
+
+.lead-fields {
+    list-style: none;
+    padding: 0;
+}
+
+.lead-fields li {
+    float:left;
+}
+
+.lead-fields li a {
+    margin: 0 2px 5px;
+}
+
+.preview p{
+    margin-bottom:0px;
+}
+
+table.dataTable thead .sorting_asc:after{
+    display:none !important;
+}
+
+
+.no-padding {
+    padding-left: 0px;
+}
+
+.no-margin {
+    margin-left: 0px;
+}
+
+
+.no-border-select {
+    border: none;
+    background: transparent;
+    padding: 5px 0px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+a.bg-brown:hover, a.bg-brown:focus,
+button.bg-brown:hover,
+button.bg-brown:focus {
+    background-color: #c40062 !important;
+}
+
+.bg-brown {
+    background-color: #c40062 !important;
+}
+
+a.bg-color1:hover, a.bg-color1:focus,
+button.bg-color1:hover,
+button.bg-color1:focus {
+    background-color: #0dd9d9 !important;
+}
+
+.bg-color1 {
+    background-color: #0dd9d9 !important;
+}
+
+a.bg-color2:hover, a.bg-color2:focus,
+button.bg-color2:hover,
+button.bg-color2:focus {
+    background-color: #09ff09 !important;
+}
+
+.bg-color2 {
+    background-color: #09ff09 !important;
+}
+
+
+#invoice-frame {
+    width: 100%;
+    border: none;
+    height: 450px;
+}

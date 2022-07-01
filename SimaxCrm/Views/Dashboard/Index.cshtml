@@ -1,0 +1,169 @@
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- DASHBOARD-BOXES-->
+<div class="row">
+
+    @if (!User.IsInRole(SimaxCrm.Model.Enum.UserType.Account.ToString()))
+    {
+
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('NewLead')">
+            <div class="card text-white bg-primary">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.NewLead</div>
+                    <div>New Leads</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('FollowUp')">
+            <div class="card text-white bg-brown">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.FollowUp</div>
+                    <div>Today Follow Up</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('MissedFollowUp')">
+            <div class="card text-white bg-warning">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.MissedFollowUp</div>
+                    <div>Missed Follow Up</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('Converted')">
+            <div class="card text-white bg-success">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.Converted</div>
+                    <div>Converted</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('Postpone')">
+            <div class="card text-white bg-color1">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.Postpone</div>
+                    <div>Postpone</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('Reopen')">
+            <div class="card text-black-50 bg-color2">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.Reopen</div>
+                    <div>Reopen</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('Closed')">
+            <div class="card text-white bg-warning">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.Closed</div>
+                    <div>Closed</div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openLeadPage('AllLead')">
+            <div class="card text-white bg-brown">
+                <div class="card-body pb-0">
+                    <div class="text-value">@Model.AllLead</div>
+                    <div>All Leads</div>
+                </div>
+                <br />
+            </div>
+        </div>
+    }
+    <!--/.col-->
+    <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openInvoicePage('Pending')">
+        <div class="card text-white bg-primary">
+            <div class="card-body pb-0">
+                <div class="text-value">@Model.InvoicePending</div>
+                <div>Invoice Pending</div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openInvoicePage('Approved')">
+        <div class="card text-white bg-success">
+            <div class="card-body pb-0">
+                <div class="text-value">@Model.InvoiceApproved</div>
+                <div>Invoice Approved</div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <!--/.col-->
+    <div class="col-md-3 col-sm-6 col-lg-2 clickable" onclick="openInvoicePage('Rejected')">
+        <div class="card text-white bg-danger">
+            <div class="card-body pb-0">
+                <div class="text-value">@Model.InvoiceRejected</div>
+                <div>Invoice Rejected</div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <!--/.col-->
+</div>
+<!-- /DASHBOARD-BOXES-->
+<!-- DASHBOARD-CHART AREA-->
+@if (!User.IsInRole(SimaxCrm.Model.Enum.UserType.Account.ToString()))
+{
+    <div class="card-columns cols-2">
+
+        <div class="card">
+            <div class="card-header">
+                Last 6 Month Sales
+            </div>
+            <div class="card-body">
+                <div class="chart-wrapper">
+                    <canvas id="canvas-1"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Last 30 Days Leads
+            </div>
+            <div class="card-body">
+                <div class="chart-wrapper">
+                    <canvas id="canvas-5"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- /DASHBOARD-CHART AREA-->
+
+
+@section Scripts {
+    <script src="~/lib/chart.js/dist/Chart.min.js"></script>
+    <script src="~/lib/@@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script>
+    var canvas_label_1=@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.SalesChart?.Label));
+    var canvas_data_1=@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.SalesChart?.Data));
+    var canvas_label_2=@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.LeadsChart?.Label));
+    var canvas_data_2=@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.LeadsChart?.Data));
+    </script>
+    <script src="~/js/dashboard.js"></script>
+}

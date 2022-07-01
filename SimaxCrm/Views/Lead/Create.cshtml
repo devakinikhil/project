@@ -1,0 +1,104 @@
+@model SimaxCrm.Model.Entity.Lead
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <strong>Create Lead</strong>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    @if (!string.IsNullOrEmpty(ViewBag.Result))
+                    {
+                        <div class="alert alert-success">@ViewBag.Result</div>
+                    }
+                    <div class="row">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="col-md-6">
+
+                            <div class="form-group"><label asp-for="Name" class="control-label"></label><input asp-for="Name" class="form-control" /><span asp-validation-for="Name" class="text-danger"></span></div>
+
+                            <div class="form-group"><label asp-for="PhoneNumber" class="control-label"></label><input asp-for="PhoneNumber" class="form-control" /><span asp-validation-for="PhoneNumber" class="text-danger"></span></div>
+
+                            <div class="form-group"><label asp-for="Email" class="control-label"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
+
+                            <div class="form-group">
+                                <label asp-for="UserId" class="control-label"></label>
+                                <select style="height:35px" asp-for="UserId" class="form-control" asp-items="ViewBag.UserId">
+                                    <option value=""></option>
+                                    <option value="Auto">Auto</option>
+                                </select>
+                                <span asp-validation-for="UserId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="LeadSourceId" class="control-label"></label>
+                                <select style="height:35px" asp-for="LeadSourceId" class="form-control" asp-items="ViewBag.LeadSourceId">
+                                    <option value=""></option>
+                                </select><span asp-validation-for="LeadSourceId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LeadLanguageId" class="control-label"></label>
+                                <select style="height:35px" asp-for="LeadLanguageId" class="form-control" asp-items="ViewBag.LeadLanguageId">
+                                    <option value=""></option>
+                                </select><span asp-validation-for="LeadLanguageId" class="text-danger"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-6">
+
+
+                            <div class="form-group">
+                                <label asp-for="LeadTags" class="control-label"></label>
+                                <input asp-for="LeadTags" class="control-label" type="hidden" />
+                                <select class="multipleSelect form-control" multiple style="height:35px" id="LeadTagMulti" name="LeadTagMulti" asp-items="ViewBag.LeadTagId">
+                                </select><span asp-validation-for="LeadTags" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group"><label asp-for="Address" class="control-label"></label><input asp-for="Address" class="form-control" /><span asp-validation-for="Address" class="text-danger"></span></div>
+
+                            <div class="form-group"><label asp-for="Country" class="control-label"></label><input asp-for="Country" class="form-control" /><span asp-validation-for="Country" class="text-danger"></span></div>
+                            <div class="form-group"><label asp-for="State" class="control-label"></label><input asp-for="State" class="form-control" /><span asp-validation-for="State" class="text-danger"></span></div>
+                            <div class="form-group"><label asp-for="City" class="control-label"></label><input asp-for="City" class="form-control" /><span asp-validation-for="City" class="text-danger"></span></div>
+                            <div class="form-group"><label asp-for="PostalCode" class="control-label"></label><input asp-for="PostalCode" class="form-control" /><span asp-validation-for="PostalCode" class="text-danger"></span></div>
+
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" value="Create" onclick="return processData()" class="btn btn-primary" />
+                                <a asp-action="Create" class="btn">Reset</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".alert-success").hide();
+            }, 5000);
+        });
+        function processData() {
+            var leadTags = helper.getFastSelectValue('LeadTagMulti');
+            $("#LeadTags").val(leadTags);
+            return true;
+        }
+    </script>
+
+}

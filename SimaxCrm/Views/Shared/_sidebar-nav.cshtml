@@ -1,0 +1,138 @@
+<nav class="sidebar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Dashboard" asp-action="Index">
+                <i class="nav-icon icon-speedometer"></i> Dashboard
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Lead" asp-action="Create">
+                <i class="nav-icon icon-puzzle"></i> Lead
+            </a>
+        </li>
+
+        @if (User.IsInRole(SimaxCrm.Model.Enum.UserType.Admin.ToString()))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadLanguage" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Language
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadSource" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Source
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadTag" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Tag
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadRemarks" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Remarks
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadAutoAssign" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Auto Assign
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Template" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> SMS/Email Template
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Product
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Create User
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="EmailSetup" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Email Setup
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="SystemSetup" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> System Setup
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="SystemSetup" asp-action="Api">
+                    <i class="nav-icon icon-puzzle"></i> Api For Website
+                </a>
+            </li>
+        }
+
+
+        @if (User.IsInRole(SimaxCrm.Model.Enum.UserType.QA.ToString()))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="LeadAutoAssign" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Lead Auto Assign
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Template" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> SMS/Email Template
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Product
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Create User
+                </a>
+            </li>
+        }
+
+
+        @if (User.IsInRole(SimaxCrm.Model.Enum.UserType.Agent.ToString()))
+        {
+
+        }
+
+        @if (User.IsInRole(SimaxCrm.Model.Enum.UserType.Account.ToString()))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Product" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Product
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">
+                    <i class="nav-icon icon-puzzle"></i> Create User
+                </a>
+            </li>
+        }
+
+
+
+
+
+    </ul>
+</nav>
